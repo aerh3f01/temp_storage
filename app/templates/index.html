@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSL Toggle & Capture</title>
+</head>
+<body>
+    <h1>SSL & Network Capture</h1>
+
+    <form method="POST">
+        <label>Enable SSL:
+            <input type="checkbox" name="toggle_ssl" value="on" onchange="this.form.submit()" {{ 'checked' if ssl_state else '' }}>
+        </label>
+    </form>
+
+    <hr>
+
+    <form method="POST">
+        <button type="submit" name="start_capture">Start Capture</button>
+        <button type="submit" name="stop_capture">Stop Capture</button>
+    </form>
+
+    <a href="/download">Download .pcap file</a>
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
