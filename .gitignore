@@ -1,0 +1,7 @@
+## Ignoring key and certificates 
+*.key
+*.pem
+*.crt
+*.pfx
+*.cer
+*.p12
